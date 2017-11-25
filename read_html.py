@@ -9,7 +9,9 @@ def read_html(page):
     :param page:
         takes in text content or a "requests" response
     :return:
-        renders raw html in a tab of your browser
+        1. creates a temporary html file
+        2. renders that html file in a tab of your browser
+        3. temp file is deleted
     """
     tmpdir = tempfile.mkdtemp()
     path = os.path.join(tmpdir, 'browse.html')
